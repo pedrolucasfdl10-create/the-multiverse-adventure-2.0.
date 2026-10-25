@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="pt-BR"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#0b0b1a">
 <title>The Multiverse Adventure 3D (teste)</title>
 <style>
 :root{color-scheme:light}
@@ -738,4 +740,5 @@ $("lback").onclick=()=>{mpClose();show("s1")};
 $("vbtn").onclick=()=>voiceStart();
 $("vm").onclick=()=>{if(!MP)return;if(!MP.vs){voiceStart();return}MP.muted=!MP.muted;if(MP.mic)MP.mic.getAudioTracks().forEach(t=>t.enabled=!MP.muted);updVm()};
 </script>
+<script>if('serviceWorker' in navigator)navigator.serviceWorker.register('sw.js');</script>
 </body></html>
